@@ -1,0 +1,6 @@
+alternc-mailpit (0.0.1) buster bullseye bookworm; urgency=medium
+
+  * Project initialization
+  * Enable a simple vhost to manage mailpit service
+
+ -- Camille Lafitte <alternc@webelys.com>  Fri, 06 Sep 2024 10:54:00 +0200
