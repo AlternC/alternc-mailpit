@@ -34,7 +34,7 @@ function enable_apache_module() {
 case "$1" in
     configure)
 		insert_domains_type
-		enable_apache_module
+		enable_apache_module $@
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)
