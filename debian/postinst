@@ -26,7 +26,9 @@ function insert_domains_type() {
 function enable_apache_module() {
 	if [ -e /usr/share/apache2/apache2-maintscript-helper ]; then
 		. /usr/share/apache2/apache2-maintscript-helper
+		apache2_has_module proxy || apache2_invoke enmod proxy 2>/dev/null || exit $?
 		apache2_has_module proxy_http || apache2_invoke enmod proxy_http 2>/dev/null || exit $?
+		apache2_has_module proxy_wstunnel || apache2_invoke enmod proxy_wstunnel 2>/dev/null || exit $?
 	fi
 }
 
